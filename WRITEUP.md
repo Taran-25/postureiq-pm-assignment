@@ -1,4 +1,4 @@
-# PostureIQ — 1-Page Write-Up
+# PostureIQ Write-Up
 
 ## Problem Being Solved
 
