@@ -119,7 +119,7 @@ F3 is real but downstream. Assign workflows only matter once Aakash can see and 
 
 ## 6. Wireframes
 
-**Live prototype:** [PostureIQ on Figma Make](https://www.figma.com/make/nlUZr9QnhU25pLs7sdYXxp/PostureIQ?fullscreen=1&t=iwJDarwlwA5Hc7Pg-1)
+**Live prototype:** [PostureIQ on Figma Make](https://www.figma.com/make/akZeyWJBVHXFr04gQCLWaa/PostureIQ?fullscreen=1&t=kC4TZcQwMGonZv9b-1)
 
 Built in Figma Make. Three interactive screens navigable via the top nav. Annotations visible on each screen explain the design decisions inline.
 
