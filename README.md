@@ -1,6 +1,5 @@
 # PostureIQ — Cloud Posture Dashboard
 
-> PM Trainee Interview Assignment | Round 2
 
 ---
 
@@ -88,9 +87,6 @@ Exports numbers from 3 tools, pastes into a doc or slide, tries to show a trend 
 ### Frictions Being Solved
 
 PostureIQ addresses **F1, F2, and F3.**
-
-
-> PM Trainee Interview Assignment | Round 2
 
 ---
 
