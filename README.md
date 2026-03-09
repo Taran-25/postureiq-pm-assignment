@@ -119,8 +119,42 @@ F3 is real but downstream. Assign workflows only matter once Aakash can see and 
 
 ## 6. Wireframes
 
-Built in Figma Make. Three screens:
+**Live prototype:** [PostureIQ on Figma Make](https://www.figma.com/make/nlUZr9QnhU25pLs7sdYXxp/PostureIQ?fullscreen=1&t=iwJDarwlwA5Hc7Pg-1)
 
-- **Screen 1 — Unified Dashboard + Persistent Filters (P0):** All misconfigs across AWS, GCP, and Azure in one ranked table. Severity normalized. Filters persist across sessions. Solves F1 and F2.
-- **Screen 2 — Detail Drawer (P1, click any row to open):** Plain English risk brief and copy-paste CLI fix command. Solves F4.
-- **Screen 3 — Trends and Progress (P2):** Week over week issue count by severity. Account health leaderboard showing which accounts are improving and which are getting worse. Solves F6.
+Built in Figma Make. Three interactive screens navigable via the top nav. Annotations visible on each screen explain the design decisions inline.
+
+---
+
+### Screen 1 — Unified Dashboard (P0 · Solves F1, F2)
+
+The landing screen. Shows all active misconfigurations across AWS, GCP, and Azure in a single ranked table. Severity is normalized into one scale so Critical always means Critical regardless of which tool flagged it. Issues are sorted by severity first, then by how many days they have been open — so the most dangerous and most neglected items surface at the top.
+
+KPI cards at the top give Aakash an instant read: 47 Critical, 132 High, 89 Medium, 23 resolved this week with a delta chip showing "21 fewer than last week."
+
+Filter bar (All Clouds / All Accounts / All Severities) persists across sessions. Aakash sets it once — it sticks.
+
+---
+
+### Screen 2 — Detail Drawer (P1 · Solves F4)
+
+Opens when Aakash clicks any row in the table. No page navigation — it slides in as a panel over the dashboard.
+
+Shows the exact misconfiguration ARN, severity badge, cloud tag, and compliance tags (PCI-DSS 1.3, SOC2 CC6.1). Below that:
+
+- **Why This Matters** — a plain English paragraph explaining the business risk. No tool jargon. Aakash can forward this directly to his junior without writing anything.
+- **How to Fix** — a copy-paste AWS CLI block with the exact commands to remediate. One click copies it to clipboard. Junior pastes it into terminal and runs it.
+
+No assign section. No ticket creation. That is F3 and out of scope for this version.
+
+---
+
+### Screen 3 — Trends and Progress (P2 · Solves F6)
+
+Accessible via the Trends tab in the top nav. Requires 30+ days of historical data to be meaningful — this is why it is P2.
+
+Two sections:
+
+- **Issue Count Over Time** — line chart showing Critical (65→47, declining), High (~133, stable), and Medium (71→89, rising) over the last 30 days. Aakash can see at a glance that Critical is getting fixed while Medium is growing — a signal to re-prioritize.
+- **Account Health Leaderboard** — ranks all cloud accounts by total active issues, worst at top. Aakash can identify which account needs attention this week without building a spreadsheet.
+
+This screen replaces the Friday slide Aakash manually builds from 3 tools every week.
