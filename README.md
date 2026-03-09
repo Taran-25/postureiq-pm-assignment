@@ -144,7 +144,6 @@ Shows the exact misconfiguration ARN, severity badge, cloud tag, and compliance 
 - **Why This Matters** — a plain English paragraph explaining the business risk. No tool jargon. Aakash can forward this directly to his junior without writing anything.
 - **How to Fix** — a copy-paste AWS CLI block with the exact commands to remediate. One click copies it to clipboard. Junior pastes it into terminal and runs it.
 
-No assign section. No ticket creation. That is F3 and out of scope for this version.
 
 ---
 
